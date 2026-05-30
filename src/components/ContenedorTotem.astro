@@ -1,0 +1,91 @@
+---
+/**
+ * ContenedorTotem 
+ * Canvas rígido 1000×2000px auto-escalado a cualquier resolución vertical.
+ * Garantiza visualización correcta en hardware de señalización digital.
+ */
+---
+
+<div
+  id="totem-viewport"
+  class="fixed inset-0 w-screen h-screen flex items-center justify-center bg-[#dfecfc] overflow-hidden select-none touch-none"
+>
+  <div
+    id="totem-wrapper"
+    class="relative shrink-0 shadow-2xl"
+    style="
+      width: 1000px;
+      height: 2000px;
+      transform-origin: center center;
+      will-change: transform;
+    "
+  >
+    <!-- Zona de navegación: sobre el overflow, pointer-events habilitado -->
+    <div
+      class="absolute inset-0 z-50 pointer-events-none"
+      id="totem-nav-layer"
+    >
+      <slot name="nav" />
+    </div>
+
+    <!-- Contenido principal: overflow controlado -->
+    <div class="absolute inset-0 overflow-hidden">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  /**
+   * Escala el tótem proporcionalmente al viewport real del dispositivo.
+   * 
+   * Correcciones aplicadas vs versión anterior:
+   * 1. Protección contra dimensiones 0 en el primer render
+   * 2. Redondeo a 4 decimales para evitar subpíxeles en Chromium embebido
+   * 3. Reintento automático si el DOM aún no tiene dimensiones reales
+   * 4. Fuerza pointer-events-auto en hijos del slot nav
+   */
+  function scaleTotem() {
+    const totem = document.getElementById('totem-wrapper');
+    if (!totem) return;
+
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    // Protección contra render inicial con dimensiones 0
+    // Ocurre en algunos navegadores de señalización digital (Chromium embebido)
+    if (vw === 0 || vh === 0) {
+      requestAnimationFrame(scaleTotem);
+      return;
+    }
+
+    const canvasW = 1000;
+    const canvasH = 2000;
+
+    const scaleX = vw / canvasW;
+    const scaleY = vh / canvasH;
+
+    // Redondeo a 4 decimales para evitar subpíxeles
+    const scale = Math.round(Math.min(scaleX, scaleY) * 10000) / 10000;
+
+    totem.style.transform = `scale(${scale})`;
+
+    // Fuerza pointer-events en hijos del slot de navegación
+    // Evita que el wrapper pointer-events-none bloquee los botones internos
+    const navLayer = document.getElementById('totem-nav-layer');
+    if (navLayer) {
+      navLayer.querySelectorAll('a, button, [role="button"]').forEach((el) => {
+        el.style.pointerEvents = 'auto';
+      });
+    }
+  }
+
+  // Ejecución inmediata
+  scaleTotem();
+
+  // Reintento tras el primer paint por si el DOM no tenía dimensiones reales aún
+  requestAnimationFrame(scaleTotem);
+
+  // Listener pasivo para resize — cubre rotación y cambio de resolución
+  window.addEventListener('resize', scaleTotem, { passive: true });
+</script>

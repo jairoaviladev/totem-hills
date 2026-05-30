@@ -1,0 +1,105 @@
+---
+import LayoutBase from '../../layouts/LayoutBase.astro';
+import ContenedorTotem from '../../components/ContenedorTotem.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import BackBtn from '../../components/BackBtn.astro';
+import { productosData } from '../../data/productos';
+
+export function getStaticPaths() {
+  return Object.keys(productosData).map((id) => ({
+    params: { id }
+  }));
+}
+
+const { id } = Astro.params;
+const p = productosData[id];
+
+const puntoId       = Astro.url.searchParams.get('punto') ?? '•';
+const sistemaNombre = Astro.url.searchParams.get('sistema') ?? p.nombre;
+---
+
+<LayoutBase title={`Hill's | ${p.nombre}`}>
+  <ContenedorTotem>
+
+    <div class="flex flex-col h-full overflow-y-auto bg-[#dfecfc]">
+
+      <Header />
+
+      <!-- Botón volver dentro del flujo, visible en el tótem -->
+      <BackBtn label="← Volver a sistemas" />
+
+      <!-- Grid principal -->
+      <div class="flex-1 px-10 py-6 grid grid-cols-2 gap-6 content-start">
+
+        <!-- COL 1: Sistema + Producto + Descripción + Beneficios -->
+        <div class="flex flex-col gap-4">
+
+          <!-- <div class="flex items-start gap-4">
+            <div class="w-16 h-16 rounded-full bg-[#013173] flex items-center justify-center flex-shrink-0 shadow-md">
+              <span class="text-white text-2xl font-black">{puntoId}</span>
+            </div>
+            <h1 class="text-[#013173] text-4xl font-black leading-tight">{sistemaNombre}</h1>
+          </div> -->
+
+          <hr class="border-slate-300" />
+
+          <div>
+            <p class="text-slate-500 text-lg">Producto recomendado:</p>
+            <h2 class="text-[#e8401c] text-4xl font-black">{p.nombre}</h2>
+            <p class="text-slate-500 text-xl mt-1">{p.subtitulo}</p>
+          </div>
+
+          <p class="text-slate-700 text-xl leading-relaxed font-semibold">
+            {p.descripcion}
+          </p>
+
+          <div class="bg-white rounded-3xl p-6 shadow-sm">
+            <h3 class="text-[#013173] text-2xl font-black mb-4">Beneficios clave</h3>
+            <div class="flex flex-col gap-4">
+              {p.beneficios.map((b: { icono: string; texto: string }) => (
+                <div class="flex items-start gap-4">
+                  <span class="text-3xl flex-shrink-0">{b.icono}</span>
+                  <p class="text-slate-700 text-lg leading-snug">{b.texto}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+
+        <!-- COL 2: Imagen del producto -->
+        <div class="flex items-center justify-center rounded-3xl overflow-hidden h-[800px]">
+          <img
+            src={p.imagen}
+            alt={p.nombre}
+            class="h-full w-full object-contain"
+          />
+        </div>
+
+        <!-- FILA 2: Dato clínico — full width -->
+        <div class="col-span-2 bg-white rounded-3xl p-8 shadow-sm flex items-center gap-8">
+          <span class="text-5xl flex-shrink-0">{p.datoClinico.icono}</span>
+          <div class="flex-1">
+            <p class="text-[#013173] font-black text-xl">{p.datoClinico.titulo}</p>
+            <p class="text-slate-500 text-lg mt-1">{p.datoClinico.descripcion}</p>
+          </div>
+          <div class="text-center flex-shrink-0 bg-[#013173] rounded-2xl px-8 py-5">
+            <div class="text-white text-5xl font-black">{p.datoClinico.badge.valor}</div>
+            <div class="text-blue-200 text-lg">{p.datoClinico.badge.unidad}</div>
+          </div>
+        </div>
+
+        <!-- FILA 3: Advertencia — full width -->
+        <div class="col-span-2 bg-white rounded-3xl p-6 shadow-sm flex items-start gap-4">
+          <span class="text-3xl flex-shrink-0">ℹ️</span>
+          <p class="text-slate-500 text-lg leading-relaxed">{p.advertencia}</p>
+        </div>
+
+      </div>
+
+      <Footer />
+
+    </div>
+  </ContenedorTotem>
+</LayoutBase>

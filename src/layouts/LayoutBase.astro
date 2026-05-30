@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es" class="h-full select-none touch-none overflow-hidden bg-slate-950">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>{title}</title>
+  </head>
+  <body class="h-full w-full flex items-center justify-center">
+    <slot />
+    <script is:inline>
+      /**
+       * Bloqueo de eventos de interfaz para entornos desatendidos.
+       */
+      document.addEventListener('contextmenu', (e) => e.preventDefault(), { capture: true });
+      let ultimoToque = 0;
+      document.addEventListener('touchstart', (e) => {
+        const ahora = Date.now();
+        if (ahora - ultimoToque <= 300) e.preventDefault();
+        ultimoToque = ahora;
+      }, { passive: false });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @import "tailwindcss";
+
+  /* Fuerza el tamaño de fuente en textos SVG de puntos anatómicos */
+  .totem-punto-text {
+    font-size: 34px !important;
+    font-weight: 900 !important;
+  }
+</style>

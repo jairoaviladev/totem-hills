@@ -1,0 +1,68 @@
+---
+// src/pages/[especie].astro
+import LayoutBase from '../layouts/LayoutBase.astro';
+import ContenedorTotem from '../components/ContenedorTotem.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BackBtn from '../components/BackBtn.astro';
+// import ListaSistemas from '../components/ListaSistemas.jsx';
+import MapaInteractivo from '../components/MapaInteractivo.jsx';
+import Modal from '../components/Modal.jsx';
+import { especiesData } from '../data/especies';
+import { anatomiaData } from '../data/anatomia';
+
+/**
+ * Genera una página por cada especie registrada en especiesData.
+ */
+export function getStaticPaths() {
+  return Object.keys(especiesData).map((especie) => ({
+    params: { especie }
+  }));
+}
+
+const { especie } = Astro.params;
+
+const llaveEspecie = especie as keyof typeof especiesData;
+const datosEspecie = especiesData[llaveEspecie];
+const puntosSistemas = anatomiaData[llaveEspecie] || [];
+---
+
+<LayoutBase title={`Hill's | ${datosEspecie.nombre}`}>
+  <ContenedorTotem>
+
+
+    <div class="flex flex-col h-full">
+
+      <Header />
+
+       <!-- Botón volver dentro del flujo, visible en el tótem -->
+       <BackBtn label="← Volver a sistemas" />
+
+      {/* Info de especie */}
+      <div class="flex items-center justify-between px-10 py-6 mt-28">
+        <div>
+          <h2 class="text-[#023074] text-5xl font-black uppercase">{datosEspecie.nombre}</h2>
+          <div class={`h-1 w-16 ${datosEspecie.colorBoton} rounded mt-2`}></div>
+          <p class="text-slate-600 text-xl mt-3 max-w-xs">
+            Explora los sistemas y descubre la nutrición ideal para su bienestar.
+          </p>
+        </div>
+        <div class={`w-40 h-40 rounded-full border-4 ${datosEspecie.colorAccent} overflow-hidden bg-slate-800 flex-shrink-0`}>
+          <img src={datosEspecie.imagenAvatar} alt={datosEspecie.nombre} class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      {/* Mapa interactivo ocupa el espacio restante */}
+      <div class="relative flex-1">
+        {/* Pasamos 'llaveEspecie' ya tipada de forma segura */}
+        <MapaInteractivo client:load especie={llaveEspecie} />
+        <Modal client:load />
+      </div>
+      {/* Reemplaza tu contenedor actual por este: */}
+      <!-- <div class="flex-1 px-12 py-8 bg-slate-950/40">
+        <ListaSistemas client:load puntos={puntosSistemas} />
+      </div> -->
+      <Footer/>
+    </div>
+  </ContenedorTotem>
+</LayoutBase>
