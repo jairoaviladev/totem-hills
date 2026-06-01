@@ -9,7 +9,7 @@ export const especiesData = {
       colorBorde: "active:border-red-600",
       colorBoton: "bg-red-600",
       colorAccent: "border-red-500",
-      imagenAvatar: "/images/perro.jpg",
+      imagenAvatar: "/images/perro.png",
       imagenBase: "/images/perro-base.png"
     },
     gato: {
@@ -18,7 +18,7 @@ export const especiesData = {
       colorBorde: "active:border-blue-400",
       colorBoton: "bg-blue-600",
       colorAccent: "border-blue-400",
-      imagenAvatar: "/images/gato.webp",
+      imagenAvatar: "/images/gato.png",
       imagenBase: "/images/gato-base.png"
     }
   };
