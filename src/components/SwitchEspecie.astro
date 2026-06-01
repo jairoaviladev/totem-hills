@@ -1,0 +1,29 @@
+---
+import { especiesData } from '../data/especies';
+
+interface Props {
+  especieActual: string;
+}
+
+const { especieActual } = Astro.props;
+
+/**
+ * Cast seguro: permite indexar especiesData con un string genérico.
+ * evita convertir el archivo fuente a TypeScript.
+ */
+const data = especiesData as Record<string, typeof especiesData[keyof typeof especiesData]>;
+
+const todasLasEspecies = Object.keys(data);
+const especieContraria = todasLasEspecies.find((e) => e !== especieActual) ?? todasLasEspecies[0];
+const datosContraria   = data[especieContraria];
+---
+
+
+  href={`/${especieContraria}`}
+  
+  <img
+    src={datosContraria.imagenAvatar}
+    alt={datosContraria.nombre}
+    class="w-full h-full object-cover"
+  />
+</a>

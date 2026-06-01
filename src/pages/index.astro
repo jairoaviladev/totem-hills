@@ -31,7 +31,7 @@ const especies = Object.entries(especiesData);
               class={`flex flex-col items-center gap-6 p-8 active:scale-95 transition-transform cursor-pointer `}
             >
               {/* Contenedor del Avatar Circular */}
-              <div class={`w-80 h-80 rounded-full border-4 ${especie.colorAccent} overflow-hidden flex-shrink-0 bg-slate-800 shadow-inner`}>
+              <div class={`w-80 h-80 rounded-full border-none ${especie.colorAccent} overflow-hidden flex-shrink-0 bg-slate-800 shadow-inner`}>
                 <img 
                   src={especie.imagenAvatar} 
                   alt={especie.nombre} 
@@ -42,7 +42,7 @@ const especies = Object.entries(especiesData);
               {/* Información y Acción */}
               <div class="flex-1 min-w-0">
                 {/* <div class="text-white text-3xl font-black uppercase tracking-wide">{especie.nombre}</div> */}
-                <div class={`${especie.colorBoton} text-white text-3xl uppercase  font-bold py-5 px-15 rounded-2xl mt-3 inline-block shadow-md`}>
+                <div class={`${especie.colorBoton} text-white text-3xl font-medium py-5 px-15 rounded-2xl mt-3 inline-block shadow-md`}>
                   {especie.nombre}
                 </div>
               </div>

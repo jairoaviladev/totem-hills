@@ -1,5 +1,5 @@
 /**
- * Interfaces de tipado para los productos Hill's.
+ * Interfaces de tipado para los productos.
  * Garantizan autocompletado y validación en tiempo de compilación.
  */
 interface Beneficio {
@@ -10,6 +10,7 @@ interface Beneficio {
 interface BadgeClinico {
   valor: string;
   unidad: string;
+  
 }
 
 interface DatoClinico {
@@ -18,6 +19,8 @@ interface DatoClinico {
   descripcion: string;
   badge: BadgeClinico;
   badgeDesc: string;
+  bgColor:string;
+ 
 }
 
 export interface Producto {
@@ -33,12 +36,12 @@ export interface Producto {
 }
 
 /**
- * Fuente única de verdad para todos los productos Hill's.
+ * Fuente única de verdad para todos los productos.
  * El tipo Record<string, Producto> permite indexar con cualquier string
- * y elimina el error de TypeScript en [id].astro.
  * Agregar un producto aquí genera su página automáticamente.
  */
 export const productosData: Record<string, Producto> = {
+
   "cd-multicare": {
     sku: "C/D",
     nombre: "C/D Multicare",
@@ -56,10 +59,11 @@ export const productosData: Record<string, Producto> = {
       titulo: "Nutrición clínicamente comprobada",
       descripcion: "Formulado por nutricionistas y veterinarios de Hill's para apoyar la salud urinaria de tu perro.",
       badge: { valor: "7", unidad: "días" },
-      badgeDesc: "Disuelve los cristales de estruvita en tan solo 7 días (promedio 27 días)."
+      badgeDesc: "Disuelve los cristales de estruvita en tan solo 7 días (promedio 27 días).",
+      bgColor: "bg-purple-600"
     },
     advertencia: "Este producto debe ser utilizado bajo recomendación y supervisión del Médico Veterinario.",
-    imagen: "/images/producto-cd.png"
+    imagen: "/images/cd-multicare-perro.png"
   },
 
   "wd-multi-benefit": {
@@ -78,8 +82,9 @@ export const productosData: Record<string, Producto> = {
       icono: "🥣",
       titulo: "Fórmula clínicamente validada",
       descripcion: "Desarrollada por especialistas en nutrición veterinaria para el manejo integral del peso y metabolismo.",
-      badge: { valor: "✓", unidad: "clínico" },
-      badgeDesc: "Respaldada por estudios clínicos en nutrición veterinaria."
+      badge: { valor: "7", unidad: "Días" },
+      badgeDesc: "Respaldada por estudios clínicos en nutrición veterinaria.",
+      bgColor: "bg-purple-600"
     },
     advertencia: "Este producto debe ser utilizado bajo recomendación y supervisión del Médico Veterinario.",
     imagen: "/images/producto-wd.png"
@@ -102,7 +107,8 @@ export const productosData: Record<string, Producto> = {
       titulo: "Respaldo clínico renal",
       descripcion: "Formulado para extender y mejorar la calidad de vida en pacientes con enfermedad renal.",
       badge: { valor: "ERC", unidad: "soporte" },
-      badgeDesc: "Indicado para enfermedad renal crónica en todas sus etapas."
+      badgeDesc: "Indicado para enfermedad renal crónica en todas sus etapas.",
+      bgColor: "bg-purple-600"
     },
     advertencia: "Este producto debe ser utilizado bajo recomendación y supervisión del Médico Veterinario.",
     imagen: "/images/producto-kd.png"

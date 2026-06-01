@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @font-face {
     font-family: 'GothamCustom';
     src: url('/fonts/Gotham-Black.otf') format('opentype');

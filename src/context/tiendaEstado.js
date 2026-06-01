@@ -8,6 +8,7 @@ import { createSignal } from 'solid-js';
 const [isModalOpen, setIsModalOpen] = createSignal(false);
 
 const [puntoActivo, setPuntoActivo] = createSignal({
+  id:null,
   nombre: '',
   desc: '',
   productos: []   // array de IDs — soporta uno o múltiples productos

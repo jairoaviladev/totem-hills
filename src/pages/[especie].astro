@@ -47,7 +47,7 @@ const puntosSistemas = anatomiaData[llaveEspecie] || [];
             Explora los sistemas y descubre la nutrición ideal para su bienestar.
           </p>
         </div>
-        <div class={`w-40 h-40 rounded-full border-4 ${datosEspecie.colorAccent} overflow-hidden bg-slate-800 flex-shrink-0`}>
+        <div class={`w-40 h-40 rounded-full border-none ${datosEspecie.colorAccent} overflow-hidden bg-slate-800 flex-shrink-0`}>
           <img src={datosEspecie.imagenAvatar} alt={datosEspecie.nombre} class="w-full h-full object-cover" />
         </div>
       </div>
@@ -58,10 +58,9 @@ const puntosSistemas = anatomiaData[llaveEspecie] || [];
         <MapaInteractivo client:load especie={llaveEspecie} />
         <Modal client:load />
       </div>
-      {/* Reemplaza tu contenedor actual por este: */}
-      <!-- <div class="flex-1 px-12 py-8 bg-slate-950/40">
-        <ListaSistemas client:load puntos={puntosSistemas} />
-      </div> -->
+      
+        <!-- <ListaSistemas client:load puntos={puntosSistemas} /> -->
+   
       <Footer/>
     </div>
   </ContenedorTotem>

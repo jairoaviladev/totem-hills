@@ -10,6 +10,7 @@ export default function MapaInteractivo(props) {
 
   const handleTriggerPoint = (punto) => {
     setPuntoActivo({
+      id: punto.id,
       nombre: punto.nombre,
       desc: punto.desc,
       productos: punto.productos, // array de IDs de productos
@@ -48,7 +49,7 @@ export default function MapaInteractivo(props) {
             />
             {/* Número identificador */}
             <text
-              x={punto.cx}
+              x={punto.cx -10}
               y={punto.cy + 10}
               textAnchor="middle"
               dominantBaseline="middle"
