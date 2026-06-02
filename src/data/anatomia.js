@@ -8,67 +8,67 @@ export const anatomiaData = {
     perro: [
       {
         id: 1,
-        cx: -90, cy: 450,
+        cx: 600, cy: 960,
         color: "fill-blue-800",
         bgColor: "bg-blue-800",
         escala:1.2,
-        nombre: "Cerebro y función cognitiva",
-        desc: "Nutrición avanzada para soporte neuronal y función cognitiva.",
-        productos: ["wd-multi-benefit", "kd-kidney-care"]
+        nombre: "Obesidad y Control de Péso",
+        desc: "Fórmula especializada para apoyar el control de peso y favorecer el bienestar integral de tu mascota.",
+        productos: ["r-d-weight-loss"]
       },
       {
         id: 2,
-        cx: -280, cy: 660,
+        cx: 880, cy: 780,
         color: "fill-cyan-500",
         bgColor: "bg-cyan-500",
-        nombre: "Salud dental y oral",
+        nombre: "Calculos Urinarios",
         desc: "Fórmulas que ayudan a reducir el sarro y mantener la salud bucal.",
-        productos: ["wd-multi-benefit"]
+        productos: ["c-d-urinary-care"]
       },
       {
         id: 3,
-        cx: 20, cy: 780,
+        cx: 30, cy: 850,
         color: "fill-green-500",
         bgColor: "bg-green-500",
-        nombre: "Piel y pelaje",
-        desc: "Ácidos grasos esenciales para una piel sana y pelaje brillante.",
-        productos: ["wd-multi-benefit"]
+        nombre: "Alérgias",
+        desc: "La sensibilidad e intolerancia a los alimentos son problemas potencialmente graves que pueden provocar irritaciones en la piel, el pelaje y las orejas.",
+        productos: ["food-sensitive-perro"]
       },
       {
         id: 4,
         cx: 250, cy: 990,
         color: "fill-red-600",
         bgColor: "bg-red-600",
-        nombre: "Corazón",
-        desc: "Soporte cardiovascular con taurina y carnitina.",
-        productos: ["kd-kidney-care"]
+        nombre: "Articulación y Mobilidad",
+        desc: "El alimento Hill's Prescription Diet j/d es la opción ideal para perros que necesitan un cuidado especial todos los días.",
+        productos: ["j-d-mobility"]
       },
       {
         id: 5,
-        cx: 530, cy: 960,
+        cx: 450, cy: 880,
         color: "fill-amber-500",
         bgColor: "bg-amber-500",
-        nombre: "Hígado",
-        desc: "Soporte metabólico y depuración de toxinas.",
-        productos: ["wd-multi-benefit", "cd-multicare"]
+        nombre: "Enfermedades Hepáticas",
+        desc: "Transtornos del Hígado",
+        productos: ["j-d-liver-care"]
       },
       {
         id: 6,
         cx: 720, cy: 860,
         color: "fill-pink-500",
         bgColor: "bg-nk-500",
-        nombre: "Sistema digestivo",
-        desc: "Fibras prebióticas para una digestión saludable y microbioma equilibrado.",
-        productos: ["wd-multi-benefit"]
+        nombre: "Gastrointestinal",
+        desc: "Ayuda a tu perro a sentirse mejor con un alimento que revoluciona la forma de abordar los problemas gastrointestinales sensibles.",
+        productos: ["biome"]
       },
       {
         id: 7,
-        cx: 780, cy: 700,
+        cx: 800, cy: 700,
         color: "fill-purple-600",
         bgColor: "bg-purple-600",
-        nombre: "Riñones y vías urinarias",
-        desc: "Clínicamente comprobado para disolver cristales de estruvita.",
-        productos: ["cd-multicare", "kd-kidney-care"]
+        nombre: "Afecciones Renales",
+        desc: "En Hill's, los nutricionistas y veterinarios han desarrollado Hill's Prescription Diet k/d, una fórmula clínicamente probada para apoyar la salud renal.",
+        productos: ["kd-kidney-care"]
       },
       {
         id: 8,
@@ -107,7 +107,7 @@ export const anatomiaData = {
         bgColor: "bg-blue-800",
         nombre: "Cerebro y función cognitiva",
         desc: "Nutrición avanzada para soporte neuronal felino.",
-        productos: ["wd-multi-benefit"]
+        productos: ["food-sensitive"]
       },
       {
         id: 2,
@@ -116,16 +116,16 @@ export const anatomiaData = {
         bgColor: "bg-cyan-500",
         nombre: "Salud dental y oral",
         desc: "Fórmulas que ayudan a reducir el sarro en felinos.",
-        productos: ["wd-multi-benefit"]
+        productos: ["food-sensitive"]
       },
       {
         id: 3,
-        cx: 30, cy: 850,
+        cx: 20, cy: 900,
         color: "fill-green-500",
         bgColor: "bg-green-500",
-        nombre: "Piel y pelaje",
+        nombre: "Alérgias",
         desc: "Ácidos grasos esenciales para pelaje sedoso y piel sana.",
-        productos: ["wd-multi-benefit"]
+        productos: ["food-sensitive"]
       },
       {
         id: 4,

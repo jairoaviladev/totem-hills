@@ -60,6 +60,7 @@ export default function Modal() {
                       <img
                         src={producto.imagen}
                         alt={producto.nombre}
+                        loading="lazy"
                         class="max-h-full max-w-full object-contain"
                       />
                     </div>

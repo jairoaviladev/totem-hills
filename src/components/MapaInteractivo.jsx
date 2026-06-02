@@ -24,6 +24,7 @@ export default function MapaInteractivo(props) {
       <img
         src={`/images/${props.especie}-base.png`}
         alt={`Anatomía clínica: ${props.especie}`}
+        loading="lazy"
         className="absolute inset-0 w-full h-full object-contain pointer-events-none select-none z-0"
       />
 

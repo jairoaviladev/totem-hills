@@ -48,7 +48,11 @@ const puntosSistemas = anatomiaData[llaveEspecie] || [];
           </p>
         </div>
         <div class={`w-40 h-40 rounded-full border-none ${datosEspecie.colorAccent} overflow-hidden bg-slate-800 flex-shrink-0`}>
-          <img src={datosEspecie.imagenAvatar} alt={datosEspecie.nombre} class="w-full h-full object-cover" />
+          <img 
+          src={datosEspecie.imagenAvatar} 
+          alt={datosEspecie.nombre} 
+          loading="lazy"
+          class="w-full h-full object-cover" />
         </div>
       </div>
 
