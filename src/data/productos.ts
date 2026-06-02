@@ -6,7 +6,7 @@
  */
 
 
-import { iconMap } from '../assets/icons/index.ts';
+import { iconMap } from '../assets/icons/index';
 import type { ImageMetadata } from 'astro';
 
 interface Beneficio {
