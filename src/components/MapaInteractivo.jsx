@@ -16,6 +16,7 @@ export default function MapaInteractivo(props) {
       productos: punto.productos, // array de IDs de productos
     });
     setIsModalOpen(true);
+    // window.location.hash = '#modal-open';
   };
 
   return (

@@ -30,7 +30,7 @@ export const anatomiaData = {
         cx: 30, cy: 850,
         color: "fill-green-500",
         bgColor: "bg-green-500",
-        nombre: "Alérgias",
+        nombre: "Alergias",
         desc: "La sensibilidad e intolerancia a los alimentos son problemas potencialmente graves que pueden provocar irritaciones en la piel, el pelaje y las orejas.",
         productos: ["food-sensitive-perro", "food-sensitive-small-perro", "derm-complete-perro"]
       },
@@ -39,7 +39,7 @@ export const anatomiaData = {
         cx: 250, cy: 990,
         color: "fill-red-600",
         bgColor: "bg-red-600",
-        nombre: "Cardiaca",
+        nombre: "Cardíaca",
         desc: "Hill's Prescription Diet h/d comida para perro cuidado cardiaco",
         productos: ["heart-care"]
       },
@@ -124,7 +124,7 @@ export const anatomiaData = {
         cx: 20, cy: 900,
         color: "fill-green-500",
         bgColor: "bg-green-500",
-        nombre: "Alérgias",
+        nombre: "Alergias",
         desc: "Esta comida para gato está pensada para adaptarse fácilmente a la rutina diaria.",
         productos: ["food-sensitive"]
       },
