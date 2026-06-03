@@ -63,7 +63,7 @@ export const anatomiaData = {
       },
       {
         id: 7,
-        cx: 850, cy: 680,
+        cx: 550, cy: 750,
         color: "fill-purple-600",
         bgColor: "bg-purple-600",
         nombre: "Afecciones Renales",
@@ -81,7 +81,7 @@ export const anatomiaData = {
       },
       {
         id: 9,
-        cx: 550, cy: 830,
+        cx: 580, cy: 850,
         color: "fill-orange-500",
         bgColor: "bg-orange-500",
         nombre: "Diabetes",
