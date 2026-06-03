@@ -93,7 +93,7 @@ export const anatomiaData = {
         cx: 650, cy: 1300,
         color: "fill-blue-900",
         bgColor: "bg-blue-400",
-        nombre: "Cancer",
+        nombre: "Cáncer",
         desc: "Regulación de saciedad y quema de grasas con fórmula clínica.",
         productos: ["onc-care"],
         icono: "/images/cancer-icon.png"
@@ -160,7 +160,7 @@ export const anatomiaData = {
         cx: 550, cy: 1350,
         color: "fill-purple-900",
         bgColor: "bg-purple-900",
-        nombre: "Cancer",
+        nombre: "Cáncer",
         desc: "Los nutricionistas y veterinarios de Hill's desarrollaron la nutrición clínica de Hill's Prescription Diet Recuperación, formulada especialmente para apoyar a los gatos en estos momentos delicados.",
         productos: ["onc-care-gato"],
         icono: "/images/cancer-icon.png"
