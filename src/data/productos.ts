@@ -617,6 +617,188 @@ export const productosData: Record<string, Producto> = {
     advertencia: "Pregunta a tu veterinario por instrucciones de alimentación específicas para tu mascota.",
     imagen: "/images/productos-gato/biome-gato.png"
   },
+  "metabolic-gato": {
+    sku: " ",
+    nombre: "METABOLIC",
+    subtitulo: "Hill's Metabolic comida para gato pérdida y mantenimiento de peso.",
+    descripcion: "El alimento Hill's Prescription Diet Metabolic es la opción ideal para gatos que buscan un cuidado especial todos los días.",
+    especies: ["gato"],
+    beneficios: [
+      { icono: iconMap.check, texto: "El 88% de las mascotas perdieron peso en casa en 2 meses." },
+      { icono: iconMap.check, texto: "Ayuda a mantener el peso perdido y proporciona energía para el juego activo." },
+      { icono: iconMap.check, texto: "Fácil pérdida de peso: los gatos pierden peso sin reducir excesivamente el tamaño de las porciones." },
+    ],
+    datoClinico: {
+      icono: "🥣",
+      titulo: "Dato Clínico",
+      descripcion: "Al igual que ocurre con la epidemia de obesidad en humanos, más del 55% de la población de mascotas tiene sobrepeso.",
+      badge: { valor: "", unidad: " " },
+      badgeDesc: "Esta comida para gato está pensada para adaptarse fácilmente a la rutina diaria, ofreciendo ingredientes de alta calidad cuidadosamente seleccionados para que tu mascota reciba lo mejor en cada porción.",
+      bgColor: "bg-purple-600"
+    },
+    advertencia: "Pregunta a tu veterinario por instrucciones de alimentación específicas para tu mascota.",
+    imagen: "/images/productos-gato/1.png"
+  },
+  "urinary-metabolic": {
+    sku: "c/d",
+    nombre: "URINARY METABOLIC",
+    subtitulo: "Hill's Prescription Diet c/d comida para gato cuidado urinario.",
+    descripcion: "El alimento Hill's Prescription Diet c/d Multicare es la opción ideal para gatos que necesitan un cuidado especial todos los días.",
+    especies: ["gato"],
+    beneficios: [
+      { icono: iconMap.check, texto: "Nutrición para disolver cálculos de estruvita en tan solo 7 días" },
+      { icono: iconMap.check, texto: "Nutrición para brindar 8 veces más éxito en la reducción de los signos urinarios." },
+      { icono: iconMap.check, texto: "Los padres de mascotasbservaron una pérdida de peso visible con esta nutrición." },
+    ],
+    datoClinico: {
+      icono: "🥣",
+      titulo: "Dato Clínico",
+      descripcion: "Al igual que ocurre con la epidemia de obesidad en humanos, más del 55% de la población de mascotas tiene sobrepeso.",
+      badge: { valor: "7", unidad: "Días" },
+      badgeDesc: "Una vejiga saludable comienza con el equilibrio adecuado de nutrientes vitales.",
+      bgColor: "bg-purple-600"
+    },
+    advertencia: "Pregunta a tu veterinario por instrucciones de alimentación específicas para tu mascota.",
+    imagen: "/images/productos-gato/1_3.png"
+  },
+  "urinary-care": {
+    sku: "c/d",
+    nombre: "URINARY CARE",
+    subtitulo: "Hill's Prescription Diet c/d comida para gato cuidado urinario.",
+    descripcion: "El alimento Hill's Prescription Diet c/d Multicare es la opción ideal para gatos que necesitan un cuidado especial todos los días. ",
+    especies: ["gato"],
+    beneficios: [
+      { icono: iconMap.check, texto: "Formulado para reducir el estrés, un factor de riesgo para los signos urinarios comunes." },
+      { icono: iconMap.check, texto: "Formulado para disolver cálculos de estruvita en tan solo 7 días (promedio de 27 días)." },
+      { icono: iconMap.check, texto: "Formulado para disminuir el riesgo a largo plazo de cálculos dexalato de calcio cuando se alimenta diariamente." },
+    ],
+    datoClinico: {
+      icono: "🥣",
+      titulo: "Dato Clínico",
+      descripcion: "El exceso de minerales puede favorecer la formación de cristales en la orina, lo que puede llevar a la creación de cálculos en la vejiga.",
+      badge: { valor: "27", unidad: "Días" },
+      badgeDesc: "Una vejiga saludable comienza con el equilibrio adecuado de nutrientes vitales.",
+      bgColor: "bg-purple-600"
+    },
+    advertencia: "Pregunta a tu veterinario por instrucciones de alimentación específicas para tu mascota.",
+    imagen: "/images/productos-gato/2_1.png"
+  },
+  "urinary-care-cd": {
+    sku: "c/d",
+    nombre: "URINARY CARE",
+    subtitulo: "Hill's Prescription Diet c/d comida para gato cuidado urinario.",
+    descripcion: "El alimento Hill's Prescription Diet c/d Multicare es la opción ideal para gatos que necesitan un cuidado especial todos los días.",
+    especies: ["gato"],
+    beneficios: [
+      { icono: iconMap.check, texto: "Disuelve los cálculos de estruvita en tan solo 7 días (promedio de 27 días)." },
+      { icono: iconMap.check, texto: "Reduce el riesgo de cálculos de estruvita yxalato de calcio." },
+      { icono: iconMap.check, texto: "La alimentación de por vida aporta beneficios a los gatos con signos urinarios." },
+    ],
+    datoClinico: {
+      icono: "🥣",
+      titulo: "Dato Clínico",
+      descripcion: "El exceso de minerales puede favorecer la formación de cristales en la orina, lo que puede llevar a la creación de cálculos en la vejiga.",
+      badge: { valor: "27", unidad: "Días" },
+      badgeDesc: "Una vejiga saludable comienza con el equilibrio adecuado de nutrientes vitales.",
+      bgColor: "bg-purple-600"
+    },
+    advertencia: "Pregunta a tu veterinario por instrucciones de alimentación específicas para tu mascota.",
+    imagen: "/images/productos-gato/2_2.png"
+  },
+  "multi-benefit": {
+    sku: "w/d",
+    nombre: "MULTI-BENEFIT",
+    subtitulo: "Hill's w/d comida para gato manejo de peso/glucosa.",
+    descripcion: "El alimento Hill's Prescription Diet c/d Multicare es la opción ideal para gatos que necesitan un cuidado especial todos los días.",
+    especies: ["gato"],
+    beneficios: [
+      { icono: iconMap.check, texto: " Formulado para ayudar a metabolizar la grasa y mantener el músculo magro." },
+      { icono: iconMap.check, texto: "Ayuda a controlar el azúcar en la sangre." },
+      { icono: iconMap.check, texto: "Promueve una digestión saludable y heces formadas." },
+      { icono: iconMap.check, texto: " Promueve la salud del tracto urinario." },
+    ],
+    datoClinico: {
+      icono: "🥣",
+      titulo: "Dato Clínico",
+      descripcion: "Hill's Prescription Diet w/d Multi-Benefit está formulado exclusivamente para beneficiar a tu mascota en múltiples aspectos: salud urinaria, salud digestiva, control del azúcar en la sangre y control del peso.",
+      badge: { valor: "27", unidad: "Días" },
+      badgeDesc: "Esta comida para gato está pensada para adaptarse fácilmente a la rutina diaria, ofreciendo ingredientes de alta calidad cuidadosamente seleccionados para que tu mascota reciba lo mejor en cada porción.",
+      bgColor: "bg-purple-600"
+    },
+    advertencia: "Pregunta a tu veterinario por instrucciones de alimentación específicas para tu mascota.",
+    imagen: "/images/productos-gato/4.png"
+  },
+  "kidney-care-gato": {
+    sku: "k/d",
+    nombre: "KIDNEY CARE",
+    subtitulo: "Hill's Prescription Diet k/d comida para gato cuidado renal.",
+    descripcion: "El alimento Hill's Prescription Diet c/d Multicare es la opción ideal para gatos que necesitan un cuidado especial todos los días.",
+    especies: ["gato"],
+    beneficios: [
+      { icono: iconMap.check, texto: " Formulado para ayudar a metabolizar la grasa y mantener el músculo magro." },
+      { icono: iconMap.check, texto: "Ayuda a controlar los cambios invisibles dentro del tracto intestinal que afectan la función renal." },
+      { icono: iconMap.check, texto: "Ayuda a construir masa muscular y ayuda a mantener la energía y la fuerza." },
+      { icono: iconMap.check, texto: "Estimula el apetito y fomenta la ingesta de alimentos." },
+      { icono: iconMap.check, texto: "S+OXSHIELD: Formulado para promover un entorno urinario que reduce el riesgo de desarrollar cristales de estruvita yxalato de calcio." },
+    ],
+    datoClinico: {
+      icono: "🥣",
+      titulo: "Dato Clínico",
+      descripcion: "La salud digestiva de tu gato puede verse afectada negativamente por diversas causas y, cuando presenta malestar digestivo, es una experiencia completamente desagradable para todos los involucrados.",
+      badge: { valor: "k/d", unidad: " " },
+      badgeDesc: "Esta comida para gato está pensada para adaptarse fácilmente a la rutina diaria, ofreciendo ingredientes de alta calidad cuidadosamente seleccionados para que tu mascota reciba lo mejor en cada porción.",
+      bgColor: "bg-purple-600"
+    },
+    advertencia: "Pregunta a tu veterinario por instrucciones de alimentación específicas para tu mascota.",
+    imagen: "/images/productos-gato/5.png"
+  },
+  "digestive-care-gato": {
+    sku: "i/d",
+    nombre: "DIGESTIVE CARE",
+    subtitulo: "Hill's Prescription Diet i/d comida para gato Cuidado Digestivo.",
+    descripcion: "El alimento Hill's Prescription Diet Gastrointestinal Biome es la opción ideal para gatos que necesitan un cuidado especial todos los días.",
+    especies: ["gato"],
+    beneficios: [
+      { icono: iconMap.check, texto: " Nutrición altamente palatable para reponer los nutrientes perdidos." },
+      { icono: iconMap.check, texto: "Ayuda a controlar los cambios invisibles dentro del tracto intestinal que afectan la función renal." },
+      { icono: iconMap.check, texto: "Promueve heces saludables y ayuda a mejorar la digestión." },
+      { icono: iconMap.check, texto: "Ayuda a restaurar el nivel de energía y promueve un sistema inmunológico saludable." },
+    ],
+    datoClinico: {
+      icono: "🥣",
+      titulo: "Dato Clínico",
+      descripcion: "La salud digestiva de tu gato puede verse afectada negativamente por diversos factores y, cuando presenta malestar digestivo, es una experiencia completamente desagradable para todos los involucrados.",
+      badge: { valor: "i/d", unidad: " " },
+      badgeDesc: "Esta comida para gato está pensada para adaptarse fácilmente a la rutina diaria, ofreciendo ingredientes de alta calidad cuidadosamente seleccionados para que tu mascota reciba lo mejor en cada porción.",
+      bgColor: "bg-purple-600"
+    },
+    advertencia: "Pregunta a tu veterinario por instrucciones de alimentación específicas para tu mascota.",
+    imagen: "/images/productos-gato/6.png"
+  },
+  "onc-care-gato": {
+    sku: " ",
+    nombre: "ONC CARE",
+    subtitulo: "Hill's Onc Care Alimento para gato apoyo recuperación cancer.",
+    descripcion: "El alimento Hill's Prescription Diet Onc Care Recuperación es la opción ideal para gatos que necesitan un cuidado especial todos los días.",
+    especies: ["gato"],
+    beneficios: [
+      { icono: iconMap.check, texto: "Nutrición óptima rica en calorías para apoyar su actividad diaria." },
+      { icono: iconMap.check, texto: "Combinación única de prebióticos que se ha demostrado que proporciona una calidad de heces uniforme." },
+      { icono: iconMap.check, texto: " El sabor irresistible en cada tazón fomenta un apetito entusiasta." },
+      { icono: iconMap.check, texto: "Proteína altamente digerible para ayudar a mantener la fuerza y la energía." },
+      { icono: iconMap.check, texto: "Fabricado con tecnología ActivBiome+ para nutrir el microbioma intestinal." },
+    ],
+    datoClinico: {
+      icono: "🥣",
+      titulo: "Dato Clínico",
+      descripcion: "Cuando los gatos tienen cáncer, es fundamental asegurarse de que se satisfagan todas sus necesidades nutricionales.",
+      badge: { valor: " ", unidad: " " },
+      badgeDesc: "Los alimentos terapéuticos para gatos diagnosticados con cáncer están diseñados para ayudar a mantener su fuerza y energía, así como para estimular el apetito desde el primer plato.",
+      bgColor: "bg-purple-600"
+    },
+    advertencia: "Pregunta a tu veterinario por instrucciones de alimentación específicas para tu mascota.",
+    imagen: "/images/productos-gato/7_1.png"
+  },
 
   
 };
