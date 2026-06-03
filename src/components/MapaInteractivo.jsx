@@ -48,18 +48,27 @@ export default function MapaInteractivo(props) {
               r="44"
               className={`${punto.color} stroke-white stroke-2 group-active:opacity-80 transition-opacity`}
             />
-            {/* Número identificador */}
-            <text
-              x={punto.cx -10}
-              y={punto.cy + 10}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              fill="white"
-              className="totem-punto-text"
-              
-            >
-              {punto.id}
-            </text>
+            {/* Número identificador o ícono si existe */}
+            {punto.icono ? (
+              <image
+                href={punto.icono}
+                x={punto.cx - 25}
+                y={punto.cy - 25}
+                width={50}
+                height={50}
+              />
+            ) : (
+              <text
+                x={punto.cx - 10}
+                y={punto.cy + 10}
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fill="white"
+                className="totem-punto-text"
+              >
+                {punto.id}
+              </text>
+            )}
             {/* Hitbox táctil extendido */}
             <circle
               cx={punto.cx}

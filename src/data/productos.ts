@@ -468,9 +468,9 @@ export const productosData: Record<string, Producto> = {
       icono: "🔬",
       titulo: "Dato clinico",
       descripcion: "Cuando los perros tienen cáncer, es fundamental asegurarse de que se satisfagan todas sus necesidades nutricionales.",
-      badge: { valor: " ", unidad: " " },
+      badge: { valor: "ONC", unidad: "CARE" },
       badgeDesc: "Esta comida para perro está pensada para adaptarse fácilmente a la rutina diaria, ofreciendo ingredientes de alta calidad cuidadosamente seleccionados para que tu mascota reciba lo mejor en cada porción.",
-      bgColor: "bg-purple-600"
+      bgColor: "bg-[#F76F6E]"
     },
     advertencia: "Este producto debe ser utilizado bajo recomendación y supervisión del Médico Veterinario.",
     imagen: "/images/productos-perro/10.png"
@@ -567,7 +567,7 @@ export const productosData: Record<string, Producto> = {
       descripcion: "La sensibilidad y la intolerancia a los alimentos son problemas potencialmente graves que pueden provocar irritaciones en la piel, el pelaje y las orejas, e incluso molestias gastrointestinales.",
       badge: { valor: "z/d", unidad: " " },
       badgeDesc: "Esta comida para gato está pensada para adaptarse fácilmente a la rutina diaria, ofreciendo ingredientes de alta calidad cuidadosamente seleccionados para que tu mascota reciba lo mejor en cada porción.",
-      bgColor: "bg-purple-600"
+      bgColor: "bg-[#124776]"
     },
     advertencia: "Pregunta a tu veterinario por instrucciones de alimentación específicas para tu mascota.",
     imagen: "/images/f-z_d-food-sensitive-hills.png"
@@ -590,7 +590,7 @@ export const productosData: Record<string, Producto> = {
       descripcion: "La salud digestiva de tu gato puede verse afectada negativamente por diversos factores y, cuando presenta malestar digestivo, puede ser una experiencia desagradable para todos los involucrados.",
       badge: { valor: "i/d", unidad: " " },
       badgeDesc: "Respaldada por estudios clínicos en nutrición veterinaria.",
-      bgColor: "bg-purple-600"
+      bgColor: "bg-[#8A2452]"
     },
     advertencia: "Esta comida para gato está pensada para adaptarse fácilmente a la rutina diaria, ofreciendo ingredientes de alta calidad cuidadosamente seleccionados para que tu mascota reciba lo mejor en cada porción.",
     imagen: "/images/productos-gato/i-d-digestive-care.png"
@@ -792,9 +792,9 @@ export const productosData: Record<string, Producto> = {
       icono: "🥣",
       titulo: "Dato Clínico",
       descripcion: "Cuando los gatos tienen cáncer, es fundamental asegurarse de que se satisfagan todas sus necesidades nutricionales.",
-      badge: { valor: " ", unidad: " " },
+      badge: { valor: "ONC", unidad: "CARE" },
       badgeDesc: "Los alimentos terapéuticos para gatos diagnosticados con cáncer están diseñados para ayudar a mantener su fuerza y energía, así como para estimular el apetito desde el primer plato.",
-      bgColor: "bg-purple-600"
+      bgColor: "bg-[#F76F6E]"
     },
     advertencia: "Pregunta a tu veterinario por instrucciones de alimentación específicas para tu mascota.",
     imagen: "/images/productos-gato/7_1.png"
