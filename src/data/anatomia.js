@@ -14,7 +14,7 @@ export const anatomiaData = {
         escala:1.2,
         nombre: "Obesidad y Control de Péso",
         desc: "Fórmula especializada para apoyar el control de peso y favorecer el bienestar integral de tu mascota.",
-        productos: ["r-d-weight-loss"]
+        productos: ["r-d-weight-loss","metabolic","metabolic-mobility","metabolic-chicken"]
       },
       {
         id: 2,
@@ -23,7 +23,7 @@ export const anatomiaData = {
         bgColor: "bg-cyan-500",
         nombre: "Calculos Urinarios",
         desc: "Fórmulas que ayudan a reducir el sarro y mantener la salud bucal.",
-        productos: ["c-d-urinary-care"]
+        productos: ["c-d-urinary-care","urinary-care-u-d"]
       },
       {
         id: 3,
@@ -32,16 +32,16 @@ export const anatomiaData = {
         bgColor: "bg-green-500",
         nombre: "Alérgias",
         desc: "La sensibilidad e intolerancia a los alimentos son problemas potencialmente graves que pueden provocar irritaciones en la piel, el pelaje y las orejas.",
-        productos: ["food-sensitive-perro"]
+        productos: ["food-sensitive-perro", "food-sensitive-small-perro", "derm-complete-perro"]
       },
       {
         id: 4,
         cx: 250, cy: 990,
         color: "fill-red-600",
         bgColor: "bg-red-600",
-        nombre: "Articulación y Mobilidad",
-        desc: "El alimento Hill's Prescription Diet j/d es la opción ideal para perros que necesitan un cuidado especial todos los días.",
-        productos: ["j-d-mobility"]
+        nombre: "Cardiaca",
+        desc: "Hill's Prescription Diet h/d comida para perro cuidado cardiaco",
+        productos: ["heart-care"]
       },
       {
         id: 5,
@@ -59,16 +59,16 @@ export const anatomiaData = {
         bgColor: "bg-nk-500",
         nombre: "Gastrointestinal",
         desc: "Ayuda a tu perro a sentirse mejor con un alimento que revoluciona la forma de abordar los problemas gastrointestinales sensibles.",
-        productos: ["biome"]
+        productos: ["biome","digestive-care","digestive-care-2","digestive-care-5"]
       },
       {
         id: 7,
-        cx: 800, cy: 700,
+        cx: 850, cy: 680,
         color: "fill-purple-600",
         bgColor: "bg-purple-600",
         nombre: "Afecciones Renales",
         desc: "En Hill's, los nutricionistas y veterinarios han desarrollado Hill's Prescription Diet k/d, una fórmula clínicamente probada para apoyar la salud renal.",
-        productos: ["kd-kidney-care"]
+        productos: ["kd-kidney-care","k-d-kidney-care"]
       },
       {
         id: 8,
@@ -76,46 +76,46 @@ export const anatomiaData = {
         color: "fill-teal-500",
         bgColor: "bg-teal-500",
         nombre: "Articulaciones y movilidad",
-        desc: "Glucosamina y condroitina para articulaciones saludables.",
-        productos: ["wd-multi-benefit"]
+        desc: "Hill's Prescription Diet j/d comida para perro cuidado articular.",
+        productos: ["j-d-mobility"]
       },
       {
         id: 9,
-        cx: 1020, cy: 1100,
+        cx: 550, cy: 830,
         color: "fill-orange-500",
         bgColor: "bg-orange-500",
-        nombre: "Huesos y músculos",
-        desc: "Calcio y fósforo balanceados para estructura ósea óptima.",
-        productos: ["wd-multi-benefit"]
+        nombre: "Diabetes",
+        desc: "Con un sabor que encanta incluso a los paladares más exigentes, ayuda a mantener su energía, felicidad y bienestar.",
+        productos: ["w-d-multibenefit","w-d-multibenefit-chicken"]
       },
       {
         id: 10,
-        cx: 850, cy: 900,
+        cx: 650, cy: 1300,
         color: "fill-blue-400",
         bgColor: "bg-blue-400",
-        nombre: "Control de peso y metabolismo",
+        nombre: "Cancer",
         desc: "Regulación de saciedad y quema de grasas con fórmula clínica.",
-        productos: ["wd-multi-benefit"]
+        productos: ["onc-care"]
       }
     ],
   
     gato: [
       {
         id: 1,
-        cx: -90, cy: 520,
+        cx: 500, cy: 1060,
         color: "fill-blue-800",
         bgColor: "bg-blue-800",
-        nombre: "Cerebro y función cognitiva",
-        desc: "Nutrición avanzada para soporte neuronal felino.",
+        nombre: "Obesidad y Control de Péso",
+        desc: "Fórmula especializada para apoyar el control de peso y favorecer el bienestar integral de tu mascota.",
         productos: ["food-sensitive"]
       },
       {
         id: 2,
-        cx: -180, cy: 700,
+        cx: 850, cy: 900,
         color: "fill-cyan-500",
         bgColor: "bg-cyan-500",
-        nombre: "Salud dental y oral",
-        desc: "Fórmulas que ayudan a reducir el sarro en felinos.",
+        nombre: "Calculos Urinarios",
+        desc: "Fórmulas que ayudan a reducir el sarro y mantener la salud bucal.",
         productos: ["food-sensitive"]
       },
       {
@@ -124,7 +124,7 @@ export const anatomiaData = {
         color: "fill-green-500",
         bgColor: "bg-green-500",
         nombre: "Alérgias",
-        desc: "Ácidos grasos esenciales para pelaje sedoso y piel sana.",
+        desc: "Esta comida para gato está pensada para adaptarse fácilmente a la rutina diaria.",
         productos: ["food-sensitive"]
       },
       {
@@ -132,16 +132,16 @@ export const anatomiaData = {
         cx: 300, cy: 1000,
         color: "fill-red-600",
         bgColor: "bg-red-600",
-        nombre: "Corazón",
+        nombre: "Cardiaca",
         desc: "Taurina esencial para la salud cardiovascular del gato.",
         productos: ["kd-kidney-care"]
       },
       {
         id: 5,
-        cx: 480, cy: 1000,
+        cx: 500, cy: 920,
         color: "fill-amber-500",
         bgColor: "bg-amber-500",
-        nombre: "Hígado",
+        nombre: "Enfermedades Hepáticas",
         desc: "Soporte hepático y metabólico para felinos.",
         productos: ["wd-multi-benefit"]
       },
@@ -150,16 +150,16 @@ export const anatomiaData = {
         cx: 700, cy: 980,
         color: "fill-pink-500",
         bgColor: "bg-pink-500",
-        nombre: "Sistema digestivo",
-        desc: "Digestión óptima con fibras fermentables selectivas.",
-        productos: ["wd-multi-benefit"]
+        nombre: "Gastrointestinal",
+        desc: "Con un sabor que encanta incluso a los paladares más exigentes, ayuda a mantener su energía, felicidad y bienestar.",
+        productos: ["i-d-digestive-care", "biome-gato"]
       },
       {
         id: 7,
-        cx: 800, cy: 780,
+        cx: 850, cy: 750,
         color: "fill-purple-600",
         bgColor: "bg-purple-600",
-        nombre: "Riñones y vías urinarias",
+        nombre: "Afecciones Renales",
         desc: "Control del pH urinario óptimo para felinos.",
         productos: ["cd-multicare", "kd-kidney-care"]
       },
